@@ -1,6 +1,6 @@
 [project]
 name = "tiny-r-fc-2047-word"
-version = "0.1.1"
+version = "0.1.2"
 description = "Parses encoded-word email headers using quoted-printable or base64."
 requires-python = ">=3.10"
 dependencies = []
