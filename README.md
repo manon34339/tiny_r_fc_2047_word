@@ -38,3 +38,10 @@ section 6.2 says the whitespace is an artefact of folding and is not part of
 the text. Whitespace between an encoded-word and ordinary text is preserved.
 If you need the raw header, read it from the message object instead of calling
 this library.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
